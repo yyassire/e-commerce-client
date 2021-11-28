@@ -1,0 +1,37 @@
+@import "../../globalStyle/query.scss";
+.CartHeader {
+  margin-top: 20px;
+  h1 {
+    text-align: center;
+  }
+  .cartHeaderWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px;
+    .left {
+      button {
+        padding: 10px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+    .middle {
+      text-decoration: underline;
+      @include responsive("phone") {
+        display: none;
+      }
+      span {
+        margin: 0 10px;
+      }
+    }
+    .right {
+      button {
+        padding: 10px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

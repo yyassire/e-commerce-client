@@ -1,0 +1,77 @@
+@import "../../globalStyle/query.scss";
+
+.Topbar {
+  height: 10vh;
+  padding: 10px 0;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+
+    .left {
+      color: gray;
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      .language {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid gray;
+        padding: 2.5px 5px;
+        input {
+          border: none;
+          outline: none;
+        }
+      }
+      //   @include responsive("tablet") {
+      //     display: none;
+      //   }
+      //   @include responsive("phone") {
+      //   }
+    }
+    .middle {
+      flex: 1;
+      text-align: center;
+      font-size: 2rem;
+      span {
+        background-color: tomato;
+        padding: 2.5px 5px;
+        border-top-right-radius: 10px;
+      }
+      @include responsive("tablet") {
+        display: flex;
+        justify-content: flex-start;
+      }
+      @include responsive("phone") {
+        font-size: 1.5rem;
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      color: gray;
+      & > * {
+        margin: 0px 10px;
+      }
+      @include responsive("phone") {
+        & > * {
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

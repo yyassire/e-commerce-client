@@ -1,0 +1,16 @@
+@import "../../globalStyle/query.scss";
+.orderContainer {
+  display: flex;
+  justify-content: space-between;
+  .orderCart {
+    flex: 2;
+  }
+}
+@include responsive("tablet") {
+  .orderContainer {
+    flex-direction: column;
+  }
+  .Summery {
+    margin-bottom: 30px;
+  }
+}

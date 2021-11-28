@@ -1,0 +1,72 @@
+@import "../../globalStyle/query.scss";
+.Footer {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .left {
+      flex: 1;
+      padding: 10px 15px;
+      h1 {
+        margin-bottom: 15px;
+      }
+      p {
+        margin-bottom: 10px;
+        line-height: 1.5rem;
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: space-between;
+        .icon {
+          padding: 8px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 100ms ease-in-out;
+          color: white;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .middle {
+      flex: 1;
+      padding: 10px 15px;
+      h1 {
+        margin-bottom: 15px;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 50%;
+          list-style: none;
+          margin-bottom: 5px;
+        }
+      }
+      @include responsive("phone") {
+        display: none;
+      }
+    }
+    .right {
+      flex: 1;
+      padding: 10px 15px;
+      h1 {
+        margin-bottom: 15px;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

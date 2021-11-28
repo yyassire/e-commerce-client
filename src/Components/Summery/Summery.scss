@@ -1,0 +1,42 @@
+.Summery {
+  flex: 1;
+  padding: 0 40px;
+  height: 50vh;
+  .SummeryWrapper {
+    border: 1px solid gray;
+    height: 100%;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    .top {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .middle {
+      display: flex;
+      flex-direction: column;
+      .item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+      .itemTotal {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+    }
+    .bottom {
+      align-self: center;
+      margin-top: 15px;
+      width: 300px;
+      button {
+        padding: 10px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "../../globalStyle/query.scss";
+.SingleCart {
+  margin-top: 40px;
+  .singleCartWrapper {
+    display: flex;
+    padding: 20px;
+    .left {
+      flex: 1;
+      img {
+        width: 95%;
+        max-height: 90vh;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-weight: 400;
+        color: gray;
+      }
+      p {
+        line-height: 1.5rem;
+      }
+      .price {
+        font-size: 3rem;
+        color: gray;
+        margin: 20px 0;
+      }
+      .preferences {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: space-between;
+        @include responsive("tablet") {
+          width: 100%;
+        }
+        .color {
+          display: flex;
+          align-items: center;
+          span {
+            color: gray;
+            font-size: 1.5rem;
+            margin-right: 15px;
+          }
+          .span {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 1px solid gray;
+          }
+        }
+        .size {
+          span {
+            font-size: 1.5rem;
+            margin-right: 10px;
+          }
+          select {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .callToAction {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        justify-content: space-between;
+        width: 50%;
+        @include responsive("tablet") {
+          width: 100%;
+        }
+        .addsBtn {
+          display: flex;
+          align-items: center;
+          span {
+            margin: 0 10px;
+            border: 1px solid teal;
+            padding: 7px 10px;
+            border-radius: 10px;
+          }
+          .icon {
+            cursor: pointer;
+          }
+        }
+        .btn {
+          button {
+            padding: 10px;
+            background-color: transparent;
+            border: 1px solid teal;
+            cursor: pointer;
+            transition: background-color 150ms ease-in-out;
+            &:hover {
+              background-color: rgb(208, 236, 236);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// query
+@include responsive("phone") {
+  .singleCartWrapper {
+    flex-direction: column;
+  }
+}

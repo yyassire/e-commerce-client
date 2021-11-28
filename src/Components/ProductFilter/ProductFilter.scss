@@ -1,0 +1,58 @@
+@import "../../globalStyle/query.scss";
+.ProductFilter {
+  margin-top: 15px;
+  padding: 10px 20px 10px 10px;
+  .top {
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    .left {
+      display: flex;
+      align-items: center;
+      //   .size {
+
+      //   }
+      .color {
+        margin-right: 10px;
+      }
+
+      select {
+        font-size: 20px;
+        padding: 5px;
+      }
+    }
+    .right {
+      select {
+        font-size: 20px;
+        padding: 5px;
+      }
+    }
+  }
+}
+// query
+@include responsive("tablet") {
+  .bottom {
+    flex-direction: column;
+    .left {
+      flex-direction: column;
+      align-self: flex-start;
+      .color {
+        margin-right: 0px;
+      }
+      select {
+        padding: 0;
+        margin-top: 15px;
+      }
+    }
+    .right {
+      align-self: flex-start;
+      margin-top: 15px;
+    }
+  }
+}
