@@ -38,8 +38,8 @@ function Topbar() {
                 </div>}
                 <div className="middle"><Link to="/"><span>YY</span> SHOP</Link></div>
                  <div className="right">
-                     {!showTablet ? <><span>REGISTER</span>
-                     <span>SIGH IN</span>
+                     {!showTablet ? <><Link to="/register"><span>REGISTER</span></Link>
+                     <Link to="/login"><span>LOGIN</span></Link>
                    <Link to="/cart">
                    <Badge badgeContent={quantity} color="primary">
                          <ShoppingCartOutlined color="action" />
